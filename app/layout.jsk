@@ -1,0 +1,12 @@
+export const metadata = {
+  title: "Betotransport Removals",
+  description: "London removals and moving services"
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  )
+}
