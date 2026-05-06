@@ -1,0 +1,145 @@
+export default function RemovalsWebsite() {
+  return (
+    <div className="min-h-screen bg-white text-slate-900">
+      <header className="border-b bg-white sticky top-0 z-10">
+        <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="text-2xl font-semibold tracking-tight">
+            Betotransport Removals
+          </div>
+          <nav className="space-x-6 text-sm">
+            <a href="#services">Services</a>
+            <a href="#areas">Areas</a>
+            <a href="#booking">Booking</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div className="text-sm uppercase tracking-wider text-slate-500">
+            London
+          </div>
+          <h1 className="text-5xl font-bold leading-tight mt-3">
+            Modern removals for homes, flats and offices
+          </h1>
+          <p className="mt-5 text-lg text-slate-600 max-w-xl">
+            Reliable moving services across London with careful packing, fast
+            transport and flexible scheduling.
+          </p>
+
+          <div className="mt-8 flex gap-3">
+            <a
+              href="#booking"
+              className="px-6 py-3 rounded-2xl shadow font-medium border"
+            >
+              Book now
+            </a>
+
+            <a
+              href="https://wa.me/447305561273"
+              className="px-6 py-3 rounded-2xl border font-medium"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div className="rounded-3xl border p-8 shadow-sm bg-slate-50">
+          <div className="text-lg font-medium">Instant quote</div>
+
+          <div className="grid gap-3 mt-4">
+            <input
+              className="border rounded-xl p-3"
+              placeholder="Pickup postcode"
+            />
+            <input
+              className="border rounded-xl p-3"
+              placeholder="Delivery postcode"
+            />
+
+            <select className="border rounded-xl p-3">
+              <option>1 bedroom</option>
+              <option>2 bedrooms</option>
+              <option>3+ bedrooms</option>
+            </select>
+          </div>
+
+          <button className="mt-4 px-5 py-3 rounded-2xl border shadow font-medium">
+            Get quote
+          </button>
+        </div>
+      </section>
+
+      <section id="services" className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-semibold mb-8">Services</h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            "House removals",
+            "Office relocations",
+            "Packing and furniture protection",
+          ].map((item) => (
+            <div key={item} className="p-6 border rounded-2xl shadow-sm">
+              <div className="font-medium">{item}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="areas" className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-semibold mb-6">London service areas</h2>
+
+        <p className="text-slate-600">
+          Central London, North London, South London, East London, West London,
+          Croydon, Wembley, Stratford, Ealing and nearby areas.
+        </p>
+      </section>
+
+      <section id="booking" className="max-w-6xl mx-auto px-6 py-16">
+        <div className="border rounded-3xl p-8 shadow-sm">
+          <h2 className="text-3xl font-semibold">Booking request</h2>
+
+          <div className="grid md:grid-cols-2 gap-4 mt-6">
+            <input className="border rounded-xl p-3" placeholder="Full name" />
+            <input
+              className="border rounded-xl p-3"
+              placeholder="Phone number"
+            />
+            <input
+              className="border rounded-xl p-3"
+              placeholder="Email address"
+            />
+            <input className="border rounded-xl p-3" placeholder="Moving date" />
+            <input
+              className="border rounded-xl p-3"
+              placeholder="Pickup postcode"
+            />
+            <input
+              className="border rounded-xl p-3"
+              placeholder="Delivery postcode"
+            />
+
+            <textarea
+              className="border rounded-xl p-3 md:col-span-2 min-h-32"
+              placeholder="Tell us what you need moved"
+            />
+          </div>
+
+          <button className="mt-6 px-6 py-3 rounded-2xl border shadow font-medium">
+            Send request
+          </button>
+        </div>
+      </section>
+
+      <section id="contact" className="max-w-6xl mx-auto px-6 py-16">
+        <div className="border rounded-3xl p-8">
+          <h2 className="text-2xl font-semibold">Contact</h2>
+          <p className="mt-3 text-slate-600">London, United Kingdom</p>
+          <p className="text-slate-600">Phone: 07305 561273</p>
+          <p className="text-slate-600">Email: hello@betotransport.co.uk</p>
+        </div>
+      </section>
+    </div>
+  )
+}
